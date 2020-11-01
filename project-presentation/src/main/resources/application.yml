@@ -1,0 +1,13 @@
+spring:
+  profiles:
+    active: dev
+  application:
+    name: Project
+
+app: 
+  message:
+    Copyright by Yassine ${spring.application.name} 
+
+application:
+  title:  Project
+  version:  1.0.0

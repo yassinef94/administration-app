@@ -1,0 +1,65 @@
+#Connection To database
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/projet_beta
+    username: postgres
+    password: root
+    hikari:
+      maximumPoolSize: 5
+      connectionTimeout: 3000
+# The SQL dialect makes Hibernate generate better SQL for the chosen database
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        temp:
+          use_jdbc_metadata_defaults: false
+
+# Hibernate ddl auto (create, create-drop, validate, update)
+    hibernate:
+      ddl-auto: update
+      
+  jackson:
+    serialization:
+      fail-on-empty-beans: false
+
+  application:
+    name: Project
+
+## Banner config
+  banner:
+    location: classpath:banner/banner-prod.txt
+  main:
+    log-startup-info: false
+  output:
+    ansi:
+      enabled:  always
+
+# Server
+server:
+  port: 8199
+  servlet:
+    context-path: /project/api
+    
+# Token
+jwt:
+  secret: Projet@@**2K20
+  ms: 86400000
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+  show:
+    actuator: true
+
+#management: 
+#  endpoints:
+#    web:
+#      exposure:
+#        include: *
+#      exclude: loggers
+#    shutdown:
+#      enabled:  true
+#  info:
+#    git:
+#      mode: full

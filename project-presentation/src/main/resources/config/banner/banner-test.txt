@@ -1,0 +1,9 @@
+                                        
+,--------. ,------.  ,---.   ,--------. 
+'--.  .--' |  .---' '   .-'  '--.  .--' 
+   |  |    |  `--,  `.  `-.     |  |    
+   |  |    |  `---. .-'    |    |  |    
+   `--'    `------' `-----'     `--'    
+                                                                                
+Application Name: ${application.title}
+Application Version: ${application.version}
